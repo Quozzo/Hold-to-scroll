@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+
+    "name": "Right Click to Scroll",
+    "description": "This extension allows the user to scroll in a page with the Right Mouse button.",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*", "https://*/*" ],
+            "js": [ "rc2s.js" ],
+            "all_frames": true
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "rc2s.png",
+        "default_popup": "rc2s.html",
+        "default_title": "Right Click 2 Scroll"
+    },
+
+    "icons": {
+        "16": "rc2s.png",
+        "48": "rc2s.png",
+        "128": "rc2s.png"
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs"
+    ]
+}
